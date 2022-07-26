@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './Form.module.css'
+import Button from '../Button/Button'
 import { useState} from 'react'
 
 function Form(){
@@ -11,6 +12,7 @@ function Form(){
 
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
+    const [cpf, setCpf] = useState ('')
 
     return(
         <div>
@@ -29,8 +31,13 @@ function Form(){
                     onChange = {(e) => setPassword(e.target.value)}></input>
                 </div>
                 <div>
-                    <input type="submit" placeholder="Cadastrar"></input>
+                    <label htmlFor="cpf">CPF:</label>
+                    <input type="cpf" 
+                    id="cpf" name="cpf"
+                    placeholder="Insira seu CPF"
+                    onChange = {(e) => setCpf(e.target.value)}></input>
                 </div>
+                <Button text="Submit"/>
             </form>
         </div>
     )
