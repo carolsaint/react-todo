@@ -17,7 +17,7 @@ function Form(){
     return(
         <div className={style.container}>
             <div className={style.text}>
-            <h3>Ajude o algoritmo a ser mais certeiro</h3>
+            <h3 style={{ fontSize: '20px' }}>Ajude o algoritmo a ser mais certeiro</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptates, quaerat magnam nulla ipsa eligendi accusamus mollitia fugit, consequuntur quasi vero optio voluptatum sint molestias rerum doloremque magni architecto vitae! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 <br></br> Nam doloremque reprehenderit architecto ipsam natus iusto et! Natus expedita, sed, minus suscipit enim unde, nemo inventore hic atque aspernatur eaque ad.</p>
             </div>
@@ -25,19 +25,20 @@ function Form(){
             <form onSubmit={cadastrarUsuario}>
                 <div>
                     <label htmlFor="name">Seu nome:</label><br></br>
-                    <input type="text" id="name" name="name" placeholder="Insira seu nome"
+                    <input type="text" style={{ width: '340px' }}
+                    id="name" name="name" placeholder="Insira seu nome"
                     onChange = {(e) => setName(e.target.value)}></input>
                 </div>
                 <div>
                     <label htmlFor="email">Seu Email:</label><br></br>
-                    <input type="email" 
+                    <input type="email" style={{ width: '340px' }}
                     id="email" name="email"
                     placeholder="Insira sua senha"
                     onChange = {(e) => setEmail(e.target.value)}></input>
                 </div>
                 <div>
                     <label htmlFor="cpf">Seu CPF:</label><br></br>
-                    <input type="cpf" 
+                    <input type="cpf" style={{ width: '340px' }}
                     id="cpf" name="cpf"
                     placeholder="Insira seu CPF"
                     onChange = {(e) => setCpf(e.target.value)}></input>

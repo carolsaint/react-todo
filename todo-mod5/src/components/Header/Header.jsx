@@ -6,9 +6,17 @@ const Header = () => {
   return (
     <div className={style.header}>
         <div className={style.text}>
-        <h5>uma seleção de produtos</h5>
-        <h2>especial para você</h2>
-        <p>Todo os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+        <p style={{ fontSize: '1.25em', fontWeight: '200', marginBottom: '0.5em', padding: '0.1em' }}>
+          uma seleção de produtos
+        </p>
+
+        <h1 style={{ fontSize: '2.5em', fontWeight: '600', marginBottom: '0.5em', padding: '0.1em' }}>
+          especial para você
+        </h1>
+        <br></br>
+        <p style={{ fontSize: '1em', fontWeight: '300', padding: '0.1em' }}>
+          Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!
+        </p>
         </div>
         <div className={style.buttons}>
         <Button text="Conheça a Linx"/>

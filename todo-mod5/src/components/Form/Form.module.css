@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    margin-top: 0px;
 
 }
 
@@ -11,17 +12,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 50%;
-    margin-right: 290px;
+    width: 40%;
+    margin-right: 270px;
 }
 
+
 .text{
-    width: 50%;
+    width: 40%;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: left;
     flex-direction: column;
-    margin-left: 290px;
+    margin-left: 260px;
     font-size: 12px;
     text-align: left;
 }
