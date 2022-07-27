@@ -25,20 +25,20 @@ function Form(){
             <form onSubmit={cadastrarUsuario}>
                 <div>
                     <label htmlFor="name">Seu nome:</label><br></br>
-                    <input type="text" style={{ width: '340px' }}
+                    <input className={style.input} type="text" 
                     id="name" name="name" placeholder="Insira seu nome"
                     onChange = {(e) => setName(e.target.value)}></input>
                 </div>
                 <div>
                     <label htmlFor="email">Seu Email:</label><br></br>
-                    <input type="email" style={{ width: '340px' }}
+                    <input className={style.input} type="email" 
                     id="email" name="email"
                     placeholder="Insira sua senha"
                     onChange = {(e) => setEmail(e.target.value)}></input>
                 </div>
                 <div>
                     <label htmlFor="cpf">Seu CPF:</label><br></br>
-                    <input type="cpf" style={{ width: '340px' }}
+                    <input className={style.input} type="cpf" 
                     id="cpf" name="cpf"
                     placeholder="Insira seu CPF"
                     onChange = {(e) => setCpf(e.target.value)}></input>
@@ -59,7 +59,7 @@ function Form(){
             </div>
                 <div class="right">Female</div>
                 </div>
-                <Button text="Submit"/>
+                <Button className={style.btn} text="Enviar"/>
             </form>
             </div>
         </div>
