@@ -1,33 +1,39 @@
-import React from 'react'
-import Button from '../Button/Button'
-// import style from './Products.module.css'
+import { React, useEffect, useState } from "react";
+import ProductCard from "../ProductCard/ProductCard";
+import style from "./Products.module.css";
+import Button from "../Button/Button";
 
-const Products = ({ productData }) => {
-  const { mockupImg, productContainer, priceContainer, infoContainer } = style
-  const { name, image, oldPrice, price, description, installments } = productData
+const Products = () => {
+  const [requisition, setRequisition] = useState([]);
+  const [page, setPage] = useState(1);
 
-  // console.log(id, name, image, oldPrice, price, description, installments)
+  async function handleRequisition() {
+    const response = await fetch(
+      `https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${page}`
+    );
+    const json = await response.json();
+    const resposta = json.products;
+    setRequisition([...requisition, ...resposta]);
+    // [oito itens, novos 8 itens]
+    setPage(page + 1);
+  }
+
+  useEffect(() => {
+    handleRequisition();
+  }, []);
 
   return (
-    <div className={productContainer}>
-      <img className={mockupImg} src={image}></img>
-
-      <div className={infoContainer}>
-        <div>
-          <span style={{ fontWeight: '500' }}>{name}</span>
-          <p style={{ fontSize: '12px' }}>{description}</p>
-        </div>
-
-        <div className={priceContainer}>
-          <span>De: R${oldPrice}</span>
-          <h4>Por: R${price}</h4>
-          <span>ou {installments.count}x de R${installments.value}</span>
-        </div>
-
-        <Button text='Comprar' />
+    <div className={style.content}>
+      <div className={style.produtos}>
+        {!!requisition &&
+          requisition.map((produto) => {
+            return <ProductCard dados={produto} key={produto.id} />;
+          })}
       </div>
-    </div>
-  )
-}
 
-export default Products
+      <Button onClick={() => handleRequisition()} text='Ainda mais produtos aqui!'/>
+    </div>
+  );
+};
+
+export default Products;
