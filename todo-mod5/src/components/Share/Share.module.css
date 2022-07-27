@@ -33,3 +33,15 @@
     margin-top: 5px;
 }
 
+@media (max-width:426px){
+    .Share{
+        flex-direction: column;
+    }
+    .Share>form>div>input{
+        flex-direction: column;
+    }
+    .text{
+        word-wrap: normal;
+    }
+   
+}

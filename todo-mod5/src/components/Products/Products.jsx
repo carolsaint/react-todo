@@ -14,7 +14,6 @@ const Products = () => {
     const json = await response.json();
     const resposta = json.products;
     setRequisition([...requisition, ...resposta]);
-    // [oito itens, novos 8 itens]
     setPage(page + 1);
   }
 

@@ -14,7 +14,7 @@ const Header = () => {
           especial para você
         </h1>
         <br></br>
-        <p style={{ fontSize: '1em', fontWeight: '300', padding: '0.1em' }}>
+        <p style={{ fontSize: '1em', fontWeight: '300', padding: '0.1em', wordWrap: "normal" }}>
           Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!
         </p>
         </div>

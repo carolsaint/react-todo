@@ -15,3 +15,15 @@
     
 }
 
+@media (max-width: 426px){
+    .content{
+       flex-wrap: wrap;
+       flex-direction: row;
+       justify-content: center;
+       margin-bottom: 30px;
+    }
+    .produtos{
+        margin-bottom: 50px;
+    }
+
+  }

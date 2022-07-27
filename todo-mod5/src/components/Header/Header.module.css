@@ -25,3 +25,20 @@
   width: 100%;
   margin: 4px;
 }
+
+@media (max-width: 426px){
+  .buttons{
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+
+  .header{
+      height: 450px;
+  }
+  
+  .text{
+    text-align: start;
+    word-wrap:inherit;
+  }
+}
