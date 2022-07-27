@@ -2,7 +2,7 @@ import React from "react";
 import style from "./ProductCard.module.css";
 import Button from "../Button/Button";
 
-const ProductCard = ({ dados }) => {
+function ProductCard({ dados }) {
   const { id, name, image, description, oldPrice, price } = dados;
   return (
     <div className={style.card}>
